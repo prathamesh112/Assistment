@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Use deployed backend URL in production
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  'https://assisment-backend.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -9,7 +12,7 @@ const api = axios.create({
   },
 });
 
-// Add token to requests
+// Add token to all requests
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -21,10 +24,10 @@ api.interceptors.request.use((config) => {
 export const authAPI = {
   signup: (name, email, password) =>
     api.post('/signup', { name, email, password }),
-  
+
   login: (email, password) =>
     api.post('/login', { email, password }),
-  
+
   getProfile: () => api.get('/profile'),
 };
 
