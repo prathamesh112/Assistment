@@ -8,7 +8,16 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https://assistment-1.onrender.com"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+}));
+
+app.options("*", cors());
+
+// Middleware
 app.use(express.json());
 
 // MongoDB Connection
