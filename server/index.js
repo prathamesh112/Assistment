@@ -9,7 +9,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["https://assisment-backend.onrender.com/api"],
+  origin: [
+  "https://assisment-1.onrender.com",
+  "https://assistment-1.onrender.com"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
