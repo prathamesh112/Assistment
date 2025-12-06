@@ -1,0 +1,70 @@
+# ------------------------
+# Node / Vite / React
+# ------------------------
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+
+# ------------------------
+# Environment Files
+# ------------------------
+.env
+.env.*
+
+
+# ------------------------
+# Logs
+# ------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------
+# VS Code / Editors
+# ------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# ------------------------
+# OS System Files
+# ------------------------
+Thumbs.db
+desktop.ini
+
+# ------------------------
+# Cache folders
+# ------------------------
+.cache/
+.husky/
+.parcel-cache/
+.next/
+out/
+coverage/
+temp/
+tmp/
+
+# ------------------------
+# User profile folders accidentally included
+# (Fix for your issue)
+# ------------------------
+/Users/
+/C:/Users/ashis/
+/C:/Users/ashis/*
+
+# ------------------------
+# Tailwind
+# ------------------------
+*.tailwind.css
